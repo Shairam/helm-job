@@ -16,7 +16,7 @@ spec:
         appId: "{{ .Values.appId }}"
     spec:
       containers:
-        name: job-container
+      - name: job-container
         image: {{ .Values.image }}
         imagePullPolicy: "IfNotPresent"
       restartPolicy: Never
