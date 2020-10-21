@@ -4,6 +4,7 @@ metadata:
   labels:
     app: {{ .Values.appName }}
     appId: "{{ .Values.appId }}"
+    envId: "{{ .Values.envId }}"
   name: {{ .Values.appName }}
 spec:
   backoffLimit: 3
@@ -14,6 +15,7 @@ spec:
       labels:
         app: {{ .Values.appName }}
         appId: "{{ .Values.appId }}"
+        envId: "{{ .Values.envId }}"
     spec:
       containers:
       - name: job-container
